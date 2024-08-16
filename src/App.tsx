@@ -1,30 +1,33 @@
+import React, {useState, useEffect} from 'react';
 import {
   ActivityIndicator,
-  Image,
   SafeAreaView,
+  StatusBar,
   StyleSheet,
-  Text,
   View,
+  Text,
 } from 'react-native';
-import React, {useState, useEffect} from 'react';
+import MusicPlayer from './screens/MusicPlayer';
 import {setUpPlayer, addTrack} from '../musicPlayerServie';
-import ControlCenter from './components/ControlCenter';
 
-export default function App() {
-  const [isReady, setIsReady] = useState(false);
-  async function setUp() {
-    let isSetUp = await setUpPlayer();
-    if (isSetUp) {
+function App(): JSX.Element {
+  const [isPlayerReady, setIsPaylerReady] = useState(false);
+
+  async function setup() {
+    let isSetup = await setUpPlayer();
+
+    if (isSetup) {
       await addTrack();
     }
-    setIsReady(isSetUp);
+
+    setIsPaylerReady(isSetup);
   }
 
   useEffect(() => {
-    setUp();
+    setup();
   }, []);
 
-  if (!isReady) {
+  if (!isPlayerReady) {
     return (
       <SafeAreaView>
         <ActivityIndicator />
@@ -33,36 +36,25 @@ export default function App() {
   }
 
   return (
-    <View>
+    <View style={styles.container}>
+      <StatusBar barStyle={'light-content'} />
       <Text style={styles.appTitle}>Music Player</Text>
-      <View style={styles.container}>
-        <Image
-          source={{
-            uri: 'https://s.cafebazaar.ir/images/icons/com.shaiban.audioplayer.mplayer-13b17c69-d1c2-4a4e-94d0-e0b32bfa04ee_512x512.png?x-img=v1/resize,h_256,w_256,lossless_false/optimize',
-          }}
-          style={styles.musicImage}
-        />
-      </View>
-      <ControlCenter />
+      <MusicPlayer />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   appTitle: {
     textAlign: 'center',
     fontSize: 30,
-    color: 'black',
-    fontWeight: 'bold',
-    paddingTop: 30,
-  },
-  musicImage: {
-    height: 300,
-    width: 300,
-  },
-  container: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingVertical: 60,
+    color: 'white',
+    backgroundColor: '#001d23',
+    paddingTop: 20
   },
 });
+
+export default App;

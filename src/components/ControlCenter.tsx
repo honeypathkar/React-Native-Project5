@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   icon: {
-    color: 'black',
+    color: 'white',
   },
   playButton: {
     marginHorizontal: 24,
