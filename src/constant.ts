@@ -5,8 +5,7 @@ export const playListData: Track[] = [
     id: 1,
     title: '7 Years',
     artist: 'Lucas Graham',
-    artwork:
-      'https://s.cafebazaar.ir/images/icons/com.shaiban.audioplayer.mplayer-13b17c69-d1c2-4a4e-94d0-e0b32bfa04ee_512x512.png?x-img=v1/resize,h_256,w_256,lossless_false/optimize',
+    artwork: 'https://i.scdn.co/image/ab67616d0000b2732d94d0f04e9a58d1654b760b',
     url: require('./assests/one.m4a'),
   },
   {
@@ -14,7 +13,7 @@ export const playListData: Track[] = [
     title: 'Baller',
     artist: 'Shubh',
     artwork:
-      'https://s.cafebazaar.ir/images/icons/com.shaiban.audioplayer.mplayer-13b17c69-d1c2-4a4e-94d0-e0b32bfa04ee_512x512.png?x-img=v1/resize,h_256,w_256,lossless_false/optimize',
+      'https://a10.gaanacdn.com/gn_img/albums/Dk9KN2KBx1/9KNkpn4o3B/size_m_1704498164.jpg',
     url: require('./assests/two.m4a'),
   },
   {
@@ -23,23 +22,21 @@ export const playListData: Track[] = [
     artist: 'Shubh',
     album: 'Brahmastra',
     artwork:
-      'https://s.cafebazaar.ir/images/icons/com.shaiban.audioplayer.mplayer-13b17c69-d1c2-4a4e-94d0-e0b32bfa04ee_512x512.png?x-img=v1/resize,h_256,w_256,lossless_false/optimize',
+      'https://img.wynk.in/unsafe/200x200/filters:no_upscale():strip_exif():format(jpg)/http://s3.ap-south-1.amazonaws.com/wynk-music-cms/srch_orchard/20230512070539_197188915704/1683896530964/resources/197188915704.jpg',
     url: require('./assests/three.m4a'),
   },
   {
     id: 4,
     title: 'Her',
     artist: 'Shubh',
-    artwork:
-      'https://s.cafebazaar.ir/images/icons/com.shaiban.audioplayer.mplayer-13b17c69-d1c2-4a4e-94d0-e0b32bfa04ee_512x512.png?x-img=v1/resize,h_256,w_256,lossless_false/optimize',
+    artwork: 'https://djjohal.com.in/content/media/covers/1644.jpg',
     url: require('./assests/four.m4a'),
   },
   {
     id: 5,
     title: 'No Love',
     artist: 'Shubh',
-    artwork:
-      'https://s.cafebazaar.ir/images/icons/com.shaiban.audioplayer.mplayer-13b17c69-d1c2-4a4e-94d0-e0b32bfa04ee_512x512.png?x-img=v1/resize,h_256,w_256,lossless_false/optimize',
+    artwork: 'https://i.scdn.co/image/ab67616d0000b2732a46046339bd779f95a8cf8b',
     url: require('./assests/five.m4a'),
   },
 ];

@@ -30,7 +30,7 @@ function App(): JSX.Element {
   if (!isPlayerReady) {
     return (
       <SafeAreaView>
-        <ActivityIndicator />
+        <ActivityIndicator size="large" color="#00ff00" />
       </SafeAreaView>
     );
   }
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: 'white',
     backgroundColor: '#001d23',
-    paddingTop: 20
+    paddingTop: 20,
   },
 });
 
