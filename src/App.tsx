@@ -1,7 +1,37 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import {
+  ActivityIndicator,
+  Image,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
+import React, {useState, useEffect} from 'react';
+import {setUpPlayer, addTrack} from '../musicPlayerServie';
+import ControlCenter from './components/ControlCenter';
 
 export default function App() {
+  const [isReady, setIsReady] = useState(false);
+  async function setUp() {
+    let isSetUp = await setUpPlayer();
+    if (isSetUp) {
+      await addTrack();
+    }
+    setIsReady(isSetUp);
+  }
+
+  useEffect(() => {
+    setUp();
+  }, []);
+
+  if (!isReady) {
+    return (
+      <SafeAreaView>
+        <ActivityIndicator />
+      </SafeAreaView>
+    );
+  }
+
   return (
     <View>
       <Text style={styles.appTitle}>Music Player</Text>
@@ -13,6 +43,7 @@ export default function App() {
           style={styles.musicImage}
         />
       </View>
+      <ControlCenter />
     </View>
   );
 }
@@ -23,7 +54,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: 'black',
     fontWeight: 'bold',
-    paddingTop: 30
+    paddingTop: 30,
   },
   musicImage: {
     height: 300,
@@ -32,6 +63,6 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: 60
+    paddingVertical: 60,
   },
 });
