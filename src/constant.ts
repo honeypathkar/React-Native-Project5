@@ -15,7 +15,7 @@ export const playListData: Track[] = [
     artist: 'Shubh',
     artwork:
       'https://s.cafebazaar.ir/images/icons/com.shaiban.audioplayer.mplayer-13b17c69-d1c2-4a4e-94d0-e0b32bfa04ee_512x512.png?x-img=v1/resize,h_256,w_256,lossless_false/optimize',
-    url: require('./assets/two.m4a'),
+    url: require('./assests/two.m4a'),
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const playListData: Track[] = [
     album: 'Brahmastra',
     artwork:
       'https://s.cafebazaar.ir/images/icons/com.shaiban.audioplayer.mplayer-13b17c69-d1c2-4a4e-94d0-e0b32bfa04ee_512x512.png?x-img=v1/resize,h_256,w_256,lossless_false/optimize',
-    url: require('./assets/three.m4a'),
+    url: require('./assests/three.m4a'),
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ export const playListData: Track[] = [
     artist: 'Shubh',
     artwork:
       'https://s.cafebazaar.ir/images/icons/com.shaiban.audioplayer.mplayer-13b17c69-d1c2-4a4e-94d0-e0b32bfa04ee_512x512.png?x-img=v1/resize,h_256,w_256,lossless_false/optimize',
-    url: require('./assets/four.m4a'),
+    url: require('./assests/four.m4a'),
   },
   {
     id: 5,
@@ -40,6 +40,6 @@ export const playListData: Track[] = [
     artist: 'Shubh',
     artwork:
       'https://s.cafebazaar.ir/images/icons/com.shaiban.audioplayer.mplayer-13b17c69-d1c2-4a4e-94d0-e0b32bfa04ee_512x512.png?x-img=v1/resize,h_256,w_256,lossless_false/optimize',
-    url: require('./assets/five.m4a'),
+    url: require('./assests/five.m4a'),
   },
 ];
